@@ -1,0 +1,14 @@
+= render "layouts/header-sub"
+.mypage-contents
+  .mypage-currentuser-info-top
+    .mypage-currentuser-name
+      nakaya kousuke
+    .mypage-editbtn
+      = link_to "編集する", edit_user_registration_path(current_user)
+  .mypage-currentuser-info-dwon
+    .mypage-currentuser-gender
+      男性
+    .mypage-currentuser-age
+      28
+.like-stores-container
+= render "layouts/footer"

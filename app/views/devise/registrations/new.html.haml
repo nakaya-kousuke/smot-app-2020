@@ -1,0 +1,48 @@
+= render "layouts/header-sub"
+.registration-container
+  .registration-top-contents
+    .registration-title
+      新規登録
+      %br/
+      = render "devise/shared/links"
+  .registration-bottom-contents
+    .left-content
+      .service-title
+        smotについて
+      .service-overview
+        サービス説明
+    .right-content
+      .registration-form-box
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field
+            = f.label :姓
+            %br/
+            = f.text_field :family_name, placeholder: "例）田中", class: "input-default"
+          .field
+            = f.label :名
+            %br/
+            = f.text_field :first_name, placeholder: "例）太郎", class: "input-default"
+          .field
+            = f.label :性別
+            %br/
+            = f.select :gender, User.genders.keys, {prompt: "選択して下さい"}, class: "input-default"
+          .field
+            = f.label :年齢
+            %br/
+            = f.select :age,  User.ages.keys, {prompt: "選択して下さい"}, class: "input-default"
+          .field
+            = f.label :メールアドレス
+            %br/
+            = f.email_field :email, placeholder: "PC・携帯どちらでも可", autofocus: true, autocomplete: "email", class: "input-default"
+          .field
+            = f.label :パスワード
+            %br/
+            = f.password_field :password, placeholder: "7文字以上の半角英数字", autocomplete: "new-password", class: "input-default"
+          .field
+            = f.label :パスワードの確認
+            %br/
+            = f.password_field :password_confirmation, placeholder: "7文字以上の半角英数字", autocomplete: "new-password", class: "input-default"
+          .field
+            = f.submit "登録する", class: "btn"
+= render "layouts/footer"

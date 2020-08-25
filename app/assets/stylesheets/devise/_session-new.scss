@@ -1,0 +1,77 @@
+.session-container {
+  height: 800px;
+  width: 100%;
+  background-color: #333333;
+  color: #ffffff;
+
+  .session-top-contents {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    .session-title {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 15px;
+      a {
+        font-size: 12px;
+        color: #0062ff;
+      }
+    }
+  }
+
+  .session-bottom-contents {
+    display: flex;
+
+    .left-content {
+      width: 50%;
+      padding: 30px 80px;
+      .service-title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .service-overview {
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
+
+    .right-content {
+      width: 50%;
+      padding: 30px 80px;
+      .session-form-box {
+        .field {
+          margin: 10px;
+          .input-default {
+            height: 35px;
+            width: 240px;
+            background-color: #666666;
+            color: #ffffff;
+            padding-left: 10px;
+            border-radius: 5px;
+            border: none;
+          }
+          .input-default:focus {
+            outline: none;
+          }
+          .input-default::placeholder {
+            color: #eeeeee;
+          }
+        }
+        .btn {
+          height: 35px;
+          width: 250px;
+          border-radius: 5px;
+          border: solid 1px #0062ff;
+          background-color: #333333;
+          color: #0062ff;
+          font-weight: bold;
+          margin-top: 20px;
+          cursor: pointer;
+        }
+        .btn:hover {
+          box-shadow: 0 0 10px #0062ff;
+        }
+      }
+    }
+  }
+}

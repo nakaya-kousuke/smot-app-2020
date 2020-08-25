@@ -1,2 +1,8 @@
 @import "reset";
-@import "stores/index"
+@import "modules/header-main";
+@import "modules/header-sub";
+@import "modules/footer";
+@import "devise/registration-new";
+@import "devise/session-new";
+@import "stores/index";
+@import "users/show"

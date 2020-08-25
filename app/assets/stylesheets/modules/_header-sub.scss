@@ -1,0 +1,17 @@
+.header-contents {
+  height: 50px;
+  width: 100%;
+  background-color: #222222;
+  display: flex;
+  color: #ffffff;
+
+  .logo-content {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    line-height: 50px;
+    a {
+      color: #ffffff;
+    }
+  }
+}
