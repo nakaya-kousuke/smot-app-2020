@@ -1,0 +1,110 @@
+.new-store-container {
+  // height: 800px;
+  width: 100%;
+  background-color: #333333;
+
+  .new-store-content {
+    height: 60px;
+    width: 60%;
+    margin: 0 auto;
+    .main-title {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 60px;
+    }
+  }
+
+  .form-container {
+    width: 60%;
+    margin: 0 auto;
+
+    .form-group {
+      padding: 20px;
+
+      &__item-name {
+        color: #ffffff;
+        font-size: 14px;
+        display: flex;
+        width: 646px;
+        padding: 1px 4px;
+        margin-bottom: 5px;
+      }
+
+      &__requier {
+        width: 25px;
+        background-color: #ea352d;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        margin-left: 5px;
+        text-align: center;
+      }
+
+      &__ary {
+        background-color: #bfbfbf;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        margin-left: 5px;
+      }
+
+      &__default-size {
+        display: inline-block;
+        width: 620px;
+        height: 48px;
+        border: solid 1px #bfbfbf;
+        border-radius: 5px;
+        margin-top: 16px;
+        padding: 0px 16px;
+        line-height: 48px;
+        font-weight: normal;
+      }
+
+      #store_prefectures,
+      #store_open_time,
+      #store_close_time,
+      #store_holiday,
+      #store_smoking_environment {
+        display: inline-block;
+        width: 654px;
+        height: 48px;
+        border: solid 1px #bfbfbf;
+        border-radius: 5px;
+        margin-top: 16px;
+        padding: 0px 16px;
+        line-height: 48px;
+        font-weight: normal;
+      }
+
+      &__btn {
+        width: 360px;
+        text-align: center;
+        margin: 30px 130px;
+        &--registration {
+          width: 360px;
+          background: #4277ec;
+          font-size: 17px;
+          color: #fff;
+          font-weight: bold;
+          display: block;
+          text-decoration: none;
+          cursor: pointer;
+          line-height: 48px;
+          border-radius: 5px;
+          border: none;
+          &:hover {
+            background-color: #4286ec;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

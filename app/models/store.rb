@@ -1,14 +1,14 @@
 class Store < ApplicationRecord
   validates :store_name,            presence: true
   validates :postal_code,           presence: true
-  validates :prefectures,           presence: true {massage: "選択して下さい"}
+  validates :prefectures,           presence: {massage: "選択して下さい"}
   validates :ctiy,                  presence: true
   validates :block_number,          presence: true
   validates :phone_number,          presence: true
-  validates :open_time,             presence: true {massage: "選択して下さい"}
-  validates :close_time,            presence: true {massage: "選択して下さい"}
-  validates :holiday,               presence: true {massage: "選択して下さい"}
-  validates :smoking_environment,   presence: true {massage: "選択して下さい"}
+  validates :open_time,             presence: {massage: "選択して下さい"}
+  validates :close_time,            presence: {massage: "選択して下さい"}
+  validates :holiday,               presence: {massage: "選択して下さい"}
+  validates :smoking_environment,   presence: {massage: "選択して下さい"}
   validates :website_url,           presence: true
 
   enum prefectures: {
@@ -39,10 +39,11 @@ class Store < ApplicationRecord
   }, _prefix: true
 
   enum holiday: {
-    "月曜日": 1, "火曜日": 2, "水曜日": 3, "木曜日": 4, "金曜日": 5, "土曜日": 6, "日曜日": 7,
+    "月曜日": 1, "火曜日": 2, "水曜日": 3, "木曜日": 4, "金曜日": 5, "土曜日": 6, "日曜日": 7, "定休日なし": 8
   }, _prefix: true
 
   enum smoking_environment: {
-    "紙巻きたばこ": 1, "加熱式たばこ": 2
+    "喫煙可（紙巻きたばこＯＫ / 加熱式たばこＯＫ）": 1,
+    "喫煙可（加熱式たばこＯＫ）": 2
   }, _prefix: true
 end

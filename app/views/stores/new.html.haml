@@ -1,0 +1,85 @@
+= render "layouts/header-main"
+
+.new-store-container
+  .new-store-content
+    .main-title
+      店舗情報の登録
+  .form-container
+    = form_for @store do |f|
+      .form-group
+        .form-group__item-name
+          店舗名
+          .form-group__requier
+            必須
+        = f.text_field :store_name, class: "form-group__default-size", placeholder: "40文字まで"
+      .form-group
+        .form-group__item-name
+          郵便番号
+          .form-group__requier
+            必須
+        = f.text_field :postal_code, class: "form-group__default-size", placeholder: "例）1234567"
+      .form-group
+        .form-group__item-name
+          都道府県
+          .form-group__requier
+            必須
+        = f.select :prefectures, Store.prefectures.keys, class: "form-group__default-size", placeholder: "選択して下さい"
+      .form-group
+        .form-group__item-name
+          市町村区
+          .form-group__requier
+            必須
+        = f.text_field :ctiy, class: "form-group__default-size", placeholder: "例）福岡市中央区"
+      .form-group
+        .form-group__item-name
+          番地
+          .form-group__requier
+            必須
+        = f.text_field :block_number, class: "form-group__default-size", placeholder: "例）天神1-1-1"
+      .form-group
+        .form-group__item-name
+          建物名
+          .form-group__ary
+            任意
+        = f.text_field :apartment_name, class: "form-group__default-size", placeholder: "例）天神ビル1F"
+      .form-group
+        .form-group__item-name
+          電話番号
+          .form-group__requier
+            必須
+        = f.text_field :phone_number, class: "form-group__default-size", placeholder: "例）天神ビル1F"
+      .form-group
+        .form-group__item-name
+          オープン時間
+          .form-group__requier
+            必須
+        = f.select :open_time, Store.open_times.keys, class: "form-group__default-size", placeholder: "選択して下さい"
+      .form-group
+        .form-group__item-name
+          クローズ時間
+          .form-group__requier
+            必須
+        = f.select :close_time, Store.close_times.keys, class: "form-group__default-size", placeholder: "選択して下さい"
+      .form-group
+        .form-group__item-name
+          定休日
+          .form-group__requier
+            必須
+        = f.select :holiday, Store.holidays.keys, class: "form-group__default-size", placeholder: "選択して下さい"
+      .form-group
+        .form-group__item-name
+          喫煙環境
+          .form-group__requier
+            必須
+        = f.select :smoking_environment, Store.smoking_environments.keys, class: "form-group__default-size", placeholder: "選択して下さい"
+      .form-group
+        .form-group__item-name
+          ウェブサイト
+          .form-group__requier
+            必須
+        = f.text_field :website_url, class: "form-group__default-size", placeholder: "ウェブサイトのURLを入力して下さい"
+      .form-group
+        .form-group__btn
+          = f.submit "店舗情報を登録する", class: "form-group__btn--registration"
+
+= render "layouts/footer"
