@@ -1,4 +1,4 @@
-= render "layouts/header-main"
+= render "layouts/header-sub"
 
 .new-store-container
   .new-store-content
@@ -98,7 +98,7 @@
       .form-group
         .form-group__btn
           = f.submit "店舗情報を登録する", class: "form-group__btn--registration"
-          =link_to "#", class: "form-group__btn--back" do
+          = link_to root_path, class: "form-group__btn--back" do
             もどる
 
 = render "layouts/footer"
