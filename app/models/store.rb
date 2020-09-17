@@ -1,4 +1,7 @@
 class Store < ApplicationRecord
+  has_many :images, dependent: :destroy
+  accepts_nested_attributes_for :images, allow_destroy: true
+
   validates :store_name,            presence: true
   validates :postal_code,           presence: true
   validates :prefectures,           presence: {massage: "選択して下さい"}
@@ -44,6 +47,6 @@ class Store < ApplicationRecord
 
   enum smoking_environment: {
     "喫煙可（紙巻きたばこＯＫ / 加熱式たばこＯＫ）": 1,
-    "喫煙可（加熱式たばこＯＫ）": 2
+    "喫煙可（加熱式たばこのみＯＫ）": 2
   }, _prefix: true
 end

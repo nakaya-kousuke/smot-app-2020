@@ -8,7 +8,7 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.string      :ctiy,                  null: false
       t.string      :block_number,          null: false
       t.string      :apartment_name
-      t.integer     :phone_number,          null: false
+      t.integer     :phone_number,          null: false, limit: 7
       t.integer     :open_time,             null: false
       t.integer     :close_time,            null: false
       t.integer     :holiday,               null: false

@@ -1,15 +1,50 @@
 class StoresController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
   end
 
   def new
     @store = Store.new
+    @store.images.new
   end
 
   def create
     @store = Store.new(store_params)
+    if params[:store][:images_attributes] && @store.save
+      redirect_to root_path
+    else
+      @store.images.new
+      render :new
+    end
+  end
+
+  def show
+    @images = @store.images
+  end
+
+  # def edit
+  #   @item.images.new
+  # end
+
+  # def update
+  #   @category = @item.category_id
+  #   if @item.update(item_params) 
+  #     redirect_to item_path
+  #   elsif item_params[:images_attributes] == ""
+  #     render :edit
+  #   else item_params[:category_id].blank?
+  #     @item.category_id = @category
+  #     render :edit
+  #   end
+  # end
+
+  def destroy
+    if @store.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
@@ -25,7 +60,8 @@ class StoresController < ApplicationController
                   :close_time,
                   :holiday,
                   :smoking_environment,
-                  :website_url)
+                  :website_url,
+                  images_attributes: [:image_url, :id, :_destroy])
   end
 
   def set_store

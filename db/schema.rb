@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_13_044510) do
+ActiveRecord::Schema.define(version: 2020_09_15_114715) do
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "store_id", null: false
+    t.string "image_url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["store_id"], name: "index_images_on_store_id"
+  end
 
   create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "store_name", null: false
@@ -19,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_09_13_044510) do
     t.string "ctiy", null: false
     t.string "block_number", null: false
     t.string "apartment_name"
-    t.integer "phone_number", null: false
+    t.bigint "phone_number", null: false
     t.integer "open_time", null: false
     t.integer "close_time", null: false
     t.integer "holiday", null: false
@@ -45,4 +53,5 @@ ActiveRecord::Schema.define(version: 2020_09_13_044510) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "images", "stores"
 end
