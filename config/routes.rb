@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   }
 
   root to:"stores#index"
-  resources :stores, only: [:new, :create, :edit, :update, :destroy]
+  resources :stores, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :users, only: [:show]
 end
