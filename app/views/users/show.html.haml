@@ -2,13 +2,16 @@
 .mypage-contents
   .mypage-currentuser-info-top
     .mypage-currentuser-name
-      nakaya kousuke
+      = current_user.family_name
+      = current_user.first_name
     .mypage-editbtn
       = link_to "編集する", edit_user_registration_path(current_user)
+    .mypage-logoutbtn
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
   .mypage-currentuser-info-dwon
     .mypage-currentuser-gender
-      男性
+      = current_user.gender
     .mypage-currentuser-age
-      28
+      = current_user.age
 .like-stores-container
 = render "layouts/footer"
