@@ -1,0 +1,16 @@
+.top-main {
+  height: 600px;
+  background-image: image-url('toppage/toppage.jpg');
+  .top-message {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 150px;
+      font-weight: bold;
+    }
+  }
+}

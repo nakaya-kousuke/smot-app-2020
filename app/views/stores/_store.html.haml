@@ -1,4 +1,4 @@
-%section.stoer-container
+%section.store-container
   .store-header
     %h4.store-header__title
       スポット一覧
@@ -7,15 +7,16 @@
   .store-content
     .store-lists
       - @stores.each do |i|
-        -# - if i.store.blank?
         .store-list
           = link_to store_path(i.id) do
-            .item-list__img
-              -# = image_tag i.images[0].image_url.to_s
-            .item-list__body
+            .store-list__name
               %h5.name
                 = i.store_name
-              .item-list__info
+            .store-list-rightBox
+              .store-list-rightBox__img
+                = image_tag i.images[0].image_url.to_s, size: '400x300'
+            .store-list-leftBox
+              .store-list-leftBox__info
                 .store-address
                   %h1 住所
                   = i.prefectures
@@ -24,11 +25,12 @@
                   = i.apartment_name
                 .store-business_hours
                   %h1 営業時間
-                  .store-open_time
-                    = i.open_time
-                  %h3 〜
-                  .store-close_time
-                    = i.close_time
+                  .store-timeBox
+                    .store-open_time
+                      = i.open_time
+                    %h3 〜
+                    .store-close_time
+                      = i.close_time
                 .store-smoking_environment
                   %h1 喫煙環境
                   = i.smoking_environment
