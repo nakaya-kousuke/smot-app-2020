@@ -2,6 +2,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
+    @stores = Store.includes(:user).order("created_at DESC")
   end
 
   def new

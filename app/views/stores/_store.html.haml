@@ -1,0 +1,34 @@
+%section.stoer-container
+  .store-header
+    %h4.store-header__title
+      スポット一覧
+    %p.store-header__text
+      喫煙できる飲食店はこちら！
+  .store-content
+    .store-lists
+      - @stores.each do |i|
+        -# - if i.store.blank?
+        .store-list
+          = link_to store_path(i.id) do
+            .item-list__img
+              -# = image_tag i.images[0].image_url.to_s
+            .item-list__body
+              %h5.name
+                = i.store_name
+              .item-list__info
+                .store-address
+                  %h1 住所
+                  = i.prefectures
+                  = i.ctiy
+                  = i.block_number
+                  = i.apartment_name
+                .store-business_hours
+                  %h1 営業時間
+                  .store-open_time
+                    = i.open_time
+                  %h3 〜
+                  .store-close_time
+                    = i.close_time
+                .store-smoking_environment
+                  %h1 喫煙環境
+                  = i.smoking_environment
