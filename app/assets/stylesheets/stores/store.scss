@@ -39,13 +39,13 @@
             font-weight: bold;
           }
         }
-        .store-list-rightBox {
+        .store-list-leftBox {
           width: 50%;
           &__img img{
             object-fit: cover;
           }
         }
-        .store-list-leftBox {
+        .store-list-rightBox {
           width: 50%;
           &__info {
             text-decoration: none;

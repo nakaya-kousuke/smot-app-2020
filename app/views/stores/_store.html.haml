@@ -12,11 +12,11 @@
             .store-list__name
               %h5.name
                 = i.store_name
-            .store-list-rightBox
-              .store-list-rightBox__img
-                = image_tag i.images[0].image_url.to_s, size: '400x300'
             .store-list-leftBox
-              .store-list-leftBox__info
+              .store-list-leftBox__img
+                = image_tag i.images[0].image_url.to_s, size: '400x300'
+            .store-list-rightBox
+              .store-list-rightBox__info
                 .store-address
                   %h1 住所
                   = i.prefectures

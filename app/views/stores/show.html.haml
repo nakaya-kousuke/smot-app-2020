@@ -5,44 +5,47 @@
     .show-store-content__upperBox
       .store-name
         = @store.store_name
-      .store-imagesBox
-        .store-imagesBox__top
-          -# = image_tag @store.images.first.image_url, alt: "メイン画像"
+      .store-imageBox
+        .store-imageBox__top
+          = image_tag @store.images[0].image_url.to_s, size: '700x400', alt: "メイン画像"
         .store-imageBox__sub
-          -# - @store.images.each do |image|
-          -#   = image_tag image.image_url, alt: "サブ画像"
+          - @store.images.each do |image|
+            = image_tag image.image_url.to_s, size: '120x100', alt: "サブ画像"
     .show-store-content__bottomBox
       .store-infoBox
+        .store-infoBox__title
+          %h1 店舗情報
         .store-infoBox__innerBox
-          .store-infoBox__innerBox__address
+          .store-addressBox
+            %h2 住所
             .store-postal_code
-              %h1 郵便番号
+              %h3 〒
               = @store.postal_code
             .store-address
-              %h1 住所
               = @store.prefectures
               = @store.ctiy
               = @store.block_number
               = @store.apartment_name
-          .store-infoBox__innerBox__status
-            .store-phone_number
-              %h1 電話番号
-              = @store.phone_number
-            .store-business_hours
-              %h1 営業時間
+          -# .store-infoBox__innerBox__status
+          .store-phone_number
+            %h2 電話番号
+            = @store.phone_number
+          .store-business_hours
+            %h2 営業時間
+            .store-timeBox
               .store-open_time
                 = @store.open_time
-              %h3 〜
+              %h4 〜
               .store-close_time
                 = @store.close_time
-            .store-holiday
-              %h1 定休日
-              = @store.holiday
-            .store-smoking_environment
-              %h1 喫煙環境
-              = @store.smoking_environment
-            .store-website
-              %h1 ウェブサイト
-              = @store.website_url
+          .store-holiday
+            %h2 定休日
+            = @store.holiday
+          .store-smoking_environment
+            %h2 喫煙環境
+            = @store.smoking_environment
+          .store-website
+            %h2 ウェブサイト
+            = @store.website_url
 
 = render "layouts/footer"
