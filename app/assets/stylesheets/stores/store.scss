@@ -41,8 +41,9 @@
         }
         .store-list-rightBox {
           width: 50%;
-          // &__img {
-          // }
+          &__img img{
+            object-fit: cover;
+          }
         }
         .store-list-leftBox {
           width: 50%;
