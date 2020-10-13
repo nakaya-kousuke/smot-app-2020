@@ -14,7 +14,6 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
     if params[:store][:images_attributes] && @store.save
       redirect_to root_path
-      # redirect_to :show
     else
       @store.images.new
       render :new
@@ -57,6 +56,7 @@ class StoresController < ApplicationController
                   :prefectures,
                   :ctiy,
                   :block_number,
+                  :apartment_name,
                   :phone_number,
                   :open_time,
                   :close_time,
@@ -64,6 +64,7 @@ class StoresController < ApplicationController
                   :smoking_environment,
                   :website_url,
                   images_attributes: [:image_url, :id, :_destroy])
+          .merge(user_id: current_user.id)
   end
 
   def set_store

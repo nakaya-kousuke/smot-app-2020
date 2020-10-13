@@ -26,7 +26,6 @@
               = @store.ctiy
               = @store.block_number
               = @store.apartment_name
-          -# .store-infoBox__innerBox__status
           .store-phone_number
             %h2 電話番号
             = @store.phone_number
@@ -47,5 +46,13 @@
           .store-website
             %h2 ウェブサイト
             = @store.website_url
+    - if user_signed_in?
+      -if current_user.id == @store.user.id
+        .btnBox
+          .store-edit
+            = link_to "編集する", edit_store_path(@store)
+          .store-delete
+            = link_to "削除する", store_path(@store), method: :delete
+
 
 = render "layouts/footer"
