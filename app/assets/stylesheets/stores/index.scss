@@ -31,6 +31,9 @@
         cursor: pointer;
         transition: 0.3s;
         a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
           color: #f8f9fa;
           font-weight: bold;
           text-decoration: none;

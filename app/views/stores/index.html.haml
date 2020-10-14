@@ -7,7 +7,7 @@
     - if user_signed_in?
       .login-content
         .registration-page
-          = link_to "喫煙スポットを登録する", new_store_path
+          = link_to "喫煙スポットを登録する", new_store_path, data: {"turbolinks" => false}
     - else
       .login-content
         .register

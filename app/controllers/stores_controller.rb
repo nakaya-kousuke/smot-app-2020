@@ -24,21 +24,17 @@ class StoresController < ApplicationController
     @images = @store.images
   end
 
-  # def edit
-  #   @item.images.new
-  # end
+  def edit
+    @store.images.new
+  end
 
-  # def update
-  #   @category = @item.category_id
-  #   if @item.update(item_params) 
-  #     redirect_to item_path
-  #   elsif item_params[:images_attributes] == ""
-  #     render :edit
-  #   else item_params[:category_id].blank?
-  #     @item.category_id = @category
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @store.update(store_params) 
+      redirect_to store_path
+    else store_params[:images_attributes] == ""
+      render :edit
+    end
+  end
 
   def destroy
     if @store.destroy
