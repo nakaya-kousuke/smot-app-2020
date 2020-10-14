@@ -12,25 +12,26 @@
             .store-list__name
               %h5.name
                 = i.store_name
-            .store-list-leftBox
-              .store-list-leftBox__img
-                = image_tag i.images[0].image_url.to_s, size: '400x300'
-            .store-list-rightBox
-              .store-list-rightBox__info
-                .store-address
-                  %h1 住所
-                  = i.prefectures
-                  = i.ctiy
-                  = i.block_number
-                  = i.apartment_name
-                .store-business_hours
-                  %h1 営業時間
-                  .store-timeBox
-                    .store-open_time
-                      = i.open_time
-                    %h3 〜
-                    .store-close_time
-                      = i.close_time
-                .store-smoking_environment
-                  %h1 喫煙環境
-                  = i.smoking_environment
+            .store-list-flexbox
+              .store-list-leftBox
+                .store-list-leftBox__img
+                  = image_tag i.images[0].image_url.to_s, size: '400x300'
+              .store-list-rightBox
+                .store-list-rightBox__info
+                  .store-address
+                    %h1 住所
+                    = i.prefectures
+                    = i.ctiy
+                    = i.block_number
+                    = i.apartment_name
+                  .store-business_hours
+                    %h1 営業時間
+                    .store-timeBox
+                      .store-open_time
+                        = i.open_time
+                      %h3 〜
+                      .store-close_time
+                        = i.close_time
+                  .store-smoking_environment
+                    %h1 喫煙環境
+                    = i.smoking_environment

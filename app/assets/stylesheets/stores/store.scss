@@ -29,8 +29,7 @@
         text-decoration: none;
         background-color: #303030;
         border-radius: 5px;
-        padding: 10px;
-        // display: flex;
+        padding: 10px 30px;
         &__name {
           color: white;
           margin-bottom: 5px;
@@ -39,30 +38,33 @@
             font-weight: bold;
           }
         }
-        .store-list-leftBox {
-          width: 50%;
-          &__img img{
-            object-fit: cover;
+        .store-list-flexbox {
+          display: flex;
+          .store-list-leftBox {
+            width: 50%;
+            &__img img{
+              object-fit: cover;
+            }
           }
-        }
-        .store-list-rightBox {
-          width: 50%;
-          &__info {
-            text-decoration: none;
-            color: white;
-            .store-address {
-              margin: 10px 0;
-            }
-            .store-business_hours {
-              margin: 10px 0;
-              .store-timeBox {
-                display: flex;
+          .store-list-rightBox {
+            width: 50%;
+            &__info {
+              text-decoration: none;
+              color: white;
+              .store-address {
+                // margin: 10px 0;
               }
-            }
-            // .store-smoking_environment {
-            // }
-            h1 {
-              font-weight: bold;
+              .store-business_hours {
+                margin: 10px 0;
+                .store-timeBox {
+                  display: flex;
+                }
+              }
+              // .store-smoking_environment {
+              // }
+              h1 {
+                font-weight: bold;
+              }
             }
           }
         }
