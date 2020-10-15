@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   }
 
   root to:"stores#index"
-  resources :stores, only: [:show, :new, :create, :edit, :update, :destroy]
-  resources :users, only: [:show]
+
+  resources :stores, only: [:show, :new, :create, :edit, :update, :destroy] do
+    resources :favorites, only: [:create, :destroy]
+  end
+
+  resources :users, only: [:show] do
+    get :favorites, on: :collection
+  end
 end
