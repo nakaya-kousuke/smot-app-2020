@@ -13,10 +13,11 @@ class StoresController < ApplicationController
   def create
     @store = Store.new(store_params)
     if params[:store][:images_attributes] && @store.save
-      redirect_to root_path
+      redirect_to store_path(@store)
     else
       @store.images.new
       render :new
+      # flash.now[:alert] = "商品出品に失敗しました"
     end
   end
 
