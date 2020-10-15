@@ -1,0 +1,50 @@
+.top-main {
+  height: 600px;
+  background-image: image-url('toppage/toppage.jpg');
+  .top-message {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 150px;
+      font-weight: bold;
+    }
+
+    .login-content {
+      width: 60%;
+      margin: 0 auto;
+      display: flex;
+      .registration-page,
+      .register,
+      .login {
+        height: 50px;
+        width: 300px;
+        color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 5px;
+        line-height: 50px;
+        margin: 0 auto;
+        margin-top: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+        a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          color: #f8f9fa;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+      :hover {
+        background-color: #f8f9fa;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}

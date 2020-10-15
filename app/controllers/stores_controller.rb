@@ -2,6 +2,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
+    @stores = Store.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -12,11 +13,11 @@ class StoresController < ApplicationController
   def create
     @store = Store.new(store_params)
     if params[:store][:images_attributes] && @store.save
-      redirect_to root_path
-      # redirect_to :show
+      redirect_to store_path(@store)
     else
       @store.images.new
       render :new
+      # flash.now[:alert] = "商品出品に失敗しました"
     end
   end
 
@@ -24,21 +25,17 @@ class StoresController < ApplicationController
     @images = @store.images
   end
 
-  # def edit
-  #   @item.images.new
-  # end
+  def edit
+    @store.images.new
+  end
 
-  # def update
-  #   @category = @item.category_id
-  #   if @item.update(item_params) 
-  #     redirect_to item_path
-  #   elsif item_params[:images_attributes] == ""
-  #     render :edit
-  #   else item_params[:category_id].blank?
-  #     @item.category_id = @category
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @store.update(store_params) 
+      redirect_to store_path
+    else store_params[:images_attributes] == ""
+      render :edit
+    end
+  end
 
   def destroy
     if @store.destroy
@@ -56,6 +53,7 @@ class StoresController < ApplicationController
                   :prefectures,
                   :ctiy,
                   :block_number,
+                  :apartment_name,
                   :phone_number,
                   :open_time,
                   :close_time,
@@ -63,6 +61,7 @@ class StoresController < ApplicationController
                   :smoking_environment,
                   :website_url,
                   images_attributes: [:image_url, :id, :_destroy])
+          .merge(user_id: current_user.id)
   end
 
   def set_store

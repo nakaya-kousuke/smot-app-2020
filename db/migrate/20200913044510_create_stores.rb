@@ -14,6 +14,7 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.integer     :holiday,               null: false
       t.integer     :smoking_environment,   null: false
       t.string      :website_url,           null: false
+      t.references  :user,                  null: false, foreign_key: true
       t.timestamps
     end
   end

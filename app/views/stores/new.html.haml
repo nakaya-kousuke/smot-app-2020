@@ -94,6 +94,7 @@
               %p クリックしてファイルをアップロード
             = f.fields_for :images do |i|
               .js-file_group{"data-index" => "#{i.index}"}
+                -# = i.file_field :image_url, multiple: true, class: 'js-file'
                 = i.file_field :image_url, class: 'js-file'
       .form-group
         .form-group__btn

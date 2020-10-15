@@ -1,15 +1,10 @@
 .header-contents
-  .search-box-container
-    %input.search-box{type: 'text', placeholder: '検索する'}
+  - if user_signed_in?
+    .search-box-container
+      %input.search-box{type: 'text', placeholder: '検索する'}
   .logo-content
     = link_to "smot", root_path
   - if user_signed_in?
     .right-content
       .user-page
         = link_to "マイページ", user_path(current_user)
-  - else
-    .right-content
-      .register
-        = link_to "アカウント登録", new_user_registration_path
-      .login
-        = link_to "ログイン", new_user_session_path

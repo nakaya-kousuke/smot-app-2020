@@ -1,5 +1,20 @@
 = render "layouts/header-main"
-%h1 Stores#index
-%p Find me in app/views/stores/index.html.haml
+
+%section.top-main
+  .top-message
+    %h1 喫煙できるスポットを見つけよう。
+    %h2 smot
+    - if user_signed_in?
+      .login-content
+        .registration-page
+          = link_to "喫煙スポットを登録する", new_store_path, data: {"turbolinks" => false}
+    - else
+      .login-content
+        .register
+          = link_to "アカウント登録", new_user_registration_path
+        .login
+          = link_to "ログイン", new_user_session_path
+
+= render "stores/store"
 
 = render "layouts/footer"

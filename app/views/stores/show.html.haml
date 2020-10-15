@@ -1,0 +1,58 @@
+= render "layouts/header-sub"
+
+.show-store-container
+  .show-store-content
+    .show-store-content__upperBox
+      .store-name
+        = @store.store_name
+      .store-imageBox
+        .store-imageBox__top
+          = image_tag @store.images[0].image_url.to_s, size: '700x400', alt: "メイン画像"
+        .store-imageBox__sub
+          - @store.images.each do |image|
+            = image_tag image.image_url.to_s, size: '120x100', alt: "サブ画像"
+    .show-store-content__bottomBox
+      .store-infoBox
+        .store-infoBox__title
+          %h1 店舗情報
+        .store-infoBox__innerBox
+          .store-addressBox
+            %h2 住所
+            .store-postal_code
+              %h3 〒
+              = @store.postal_code
+            .store-address
+              = @store.prefectures
+              = @store.ctiy
+              = @store.block_number
+              = @store.apartment_name
+          .store-phone_number
+            %h2 電話番号
+            = @store.phone_number
+          .store-business_hours
+            %h2 営業時間
+            .store-timeBox
+              .store-open_time
+                = @store.open_time
+              %h4 〜
+              .store-close_time
+                = @store.close_time
+          .store-holiday
+            %h2 定休日
+            = @store.holiday
+          .store-smoking_environment
+            %h2 喫煙環境
+            = @store.smoking_environment
+          .store-website
+            %h2 ウェブサイト
+            = @store.website_url
+    - if user_signed_in?
+      -if current_user.id == @store.user.id
+        .btnBox
+          .store-edit
+            = link_to "編集する", edit_store_path(@store)
+          .store-delete
+            = link_to "削除する", store_path(@store), method: :delete
+
+
+= render "layouts/footer"

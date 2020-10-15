@@ -1,0 +1,96 @@
+.show-store-container {
+  background-color: #555555;
+  padding: 50px 0;
+  .show-store-content {
+    width: 700px;
+    text-decoration: none;
+    background-color: #303030;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 30px;
+
+    &__upperBox {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eeeeee;
+      .store-name {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .store-imageBox {
+        &__top {
+          margin-bottom: 10px;
+          img {
+            object-fit: cover;
+          }
+        }
+        &__sub {
+          margin-right: 5px;
+          margin-bottom: 10px;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    &__bottomBox {
+      .store-infoBox {
+        &__title {
+          padding-left: 10px;
+          margin-bottom: 10px;
+          border-left: 5px solid #eeeeee;
+          h1 {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+
+        &__innerBox {
+          .store-addressBox,
+          .store-phone_number,
+          .store-business_hours,
+          .store-holiday,
+          .store-smoking_environment,
+          .store-website {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 15px;
+            h2 {
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+            .store-postal_code {
+              display: flex;
+            }
+            .store-timeBox {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    .btnBox {
+      display: flex;
+      justify-content: flex-end;
+      .store-edit,
+      .store-delete {
+        width: 80px;
+        background-color: #999999;
+        border-radius: 5px;
+        text-align: center;
+        margin: 0 10px;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 2020_09_15_114715) do
     t.integer "holiday", null: false
     t.integer "smoking_environment", null: false
     t.string "website_url", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -54,4 +56,5 @@ ActiveRecord::Schema.define(version: 2020_09_15_114715) do
   end
 
   add_foreign_key "images", "stores"
+  add_foreign_key "stores", "users"
 end
