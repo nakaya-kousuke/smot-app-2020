@@ -2,8 +2,8 @@ $(function() {
   const buildFileField = (index)=> {
     const html = `<div data-index="${index}" class="js-file_group">
                     <input class="js-file" type="file"
-                    name="item[images_attributes][${index}][image_url]"
-                    id="item_images_attributes_${index}_image_url"><br>
+                    name="store[images_attributes][${index}][image_url]"
+                    id="store_images_attributes_${index}_image_url"><br>
                   </div>`;
     return html;
   }
@@ -49,7 +49,7 @@ $(function() {
       // fileIndexの先頭の数字を使ってinputを作る
       // $('#image-box__container').append(buildFileField(fileIndex[0]));
       $('#previews').append(buildFileField(fileIndex[0]));
-      $(".form-group__image-box").attr("for", `item_images_attributes_${fileIndex[0]}_image_url`)
+      $(".form-group__image-box").attr("for", `store_images_attributes_${fileIndex[0]}_image_url`)
       fileIndex.shift();
       // 末尾の数に1足した数を追加する
       fileIndex.push(fileIndex[fileIndex.length - 1] + 1)
@@ -59,7 +59,7 @@ $(function() {
   // 【edit機能】
   $('#image-box__container').on('click', '.js-img-change', function() {
     const targetIndex = $(this).data('index');
-    $(`#item_images_attributes_${targetIndex}_image_url`).trigger("click");
+    $(`#store_images_attributes_${targetIndex}_image_url`).trigger("click");
   });
 
   // 【削除機能】
@@ -69,7 +69,7 @@ $(function() {
     const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
     // もしチェックボックスが存在すればチェックを入れる
     if (hiddenCheck) hiddenCheck.prop('checked', true);
-    $(`#item_images_attributes_${targetIndex}_image_url`).remove();
+    $(`#store_images_attributes_${targetIndex}_image_url`).remove();
     $(this).parent().parent().remove();
     $(`img[data-index="${targetIndex}"]`).remove();
 
