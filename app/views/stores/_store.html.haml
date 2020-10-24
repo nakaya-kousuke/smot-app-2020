@@ -8,7 +8,7 @@
     .store-lists
       - @stores.each do |i|
         .store-list
-          = link_to store_path(i.id) do
+          = link_to store_path(i.id), data: {"turbolinks" => false} do
             .store-list__name
               %h5.name
                 = i.store_name
