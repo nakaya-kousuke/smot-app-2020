@@ -1,7 +1,10 @@
 class Store < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
+  # has_many :users, through: :favorites, optional: true
+  has_many :favorites, dependent: :destroy
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
+
 
   validates :store_name,            presence: true
   validates :postal_code,           presence: true

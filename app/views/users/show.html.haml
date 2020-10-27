@@ -1,4 +1,5 @@
 = render "layouts/header-sub"
+
 .mypage-container
   .mypage-contents
     .mypage-currentuser-title
@@ -21,4 +22,9 @@
         .mypage-logoutbtn
           = link_to "ログアウト", destroy_user_session_path, method: :delete
   .like-stores-container
+    - if @favorite_list.present?
+      - @favorite_list.each do |store|
+        = store.title
+        = store.content
+
 = render "layouts/footer"

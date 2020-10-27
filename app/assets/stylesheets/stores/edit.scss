@@ -90,7 +90,8 @@
       #previews {
         display: flex;
         .js-file {
-        display: none;
+        // display: none;
+        visibility: hidden;
         }
       }
     

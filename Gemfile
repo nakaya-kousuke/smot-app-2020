@@ -52,7 +52,7 @@ group :test do
 end
 
 group :production do # 本番環境
-  gem 'pg' # PostgreSQL
+  gem 'unicorn', '5.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

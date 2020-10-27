@@ -3,6 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
+  has_many :favorites, dependent: :destroy
+  has_many :store
+
   validates :family_name, presence: true
   validates :first_name,  presence: true
   validates :gender,      presence: {massage: "選択して下さい"}
