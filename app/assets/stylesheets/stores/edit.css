@@ -1,0 +1,207 @@
+.new-store-container {
+  width: 100%;
+  background-color: #333333;
+}
+
+.new-store-container .new-store-content {
+  height: 100px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.new-store-container .new-store-content .main-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+}
+
+.new-store-container .form-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.new-store-container .form-container .form-group {
+  padding: 20px;
+}
+
+.new-store-container .form-container .form-group__store-name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  width: 646px;
+}
+
+.new-store-container .form-container .form-group__require {
+  background-color: #ea352d;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.new-store-container .form-container .form-group__ary {
+  background-color: #aaaaaa;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-left: 5px;
+}
+
+.new-store-container .form-container .form-group__image-guide {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1px 5px;
+  margin-left: 5px;
+}
+
+.new-store-container .form-container .form-group__default-size {
+  display: inline-block;
+  width: 620px;
+  height: 48px;
+  border: solid 1px #bfbfbf;
+  border-radius: 5px;
+  margin-top: 16px;
+  padding: 0px 16px;
+  line-height: 48px;
+  font-weight: normal;
+}
+
+.new-store-container .form-container .form-group #store_prefectures,
+.new-store-container .form-container .form-group #store_open_time,
+.new-store-container .form-container .form-group #store_close_time,
+.new-store-container .form-container .form-group #store_holiday,
+.new-store-container .form-container .form-group #store_smoking_environment {
+  display: inline-block;
+  width: 654px;
+  height: 48px;
+  border: solid 1px #bfbfbf;
+  border-radius: 5px;
+  margin-top: 16px;
+  padding: 0px 16px;
+  line-height: 48px;
+  font-weight: normal;
+}
+
+.new-store-container .form-container .form-group #previews {
+  display: flex;
+}
+
+.new-store-container .form-container .form-group #previews .js-file {
+  visibility: hidden;
+}
+
+.new-store-container .form-container .form-group__image-box {
+  display: inline-block;
+  width: 652px;
+  height: 150px;
+  margin-top: 16px;
+  color: #ffffff;
+  background-color: #555555;
+  border: dashed 1px #bfbfbf;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.new-store-container .form-container .form-group__image-box:hover {
+  background-color: #666666;
+}
+
+.new-store-container .form-container .form-group__image-box p {
+  line-height: 150px;
+}
+
+.new-store-container .form-container .form-group__btn {
+  width: 360px;
+  text-align: center;
+  margin: 30px 130px;
+}
+
+.new-store-container .form-container .form-group__btn--registration {
+  width: 360px;
+  margin: 20px 0;
+  background: #4277ec;
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 48px;
+  border-radius: 5px;
+  border: none;
+}
+
+.new-store-container .form-container .form-group__btn--registration:hover {
+  background-color: #4286ec;
+}
+
+.new-store-container .form-container .form-group__btn--back {
+  width: 360px;
+  margin: 20px 0;
+  background: #666666;
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 48px;
+  border-radius: 5px;
+  border: none;
+}
+
+.new-store-container .form-container .form-group__btn--back:hover {
+  background-color: #777777;
+}
+
+.preview-box {
+  height: 150px;
+  width: 110px;
+  margin: 16px 14px 0 0;
+}
+
+.preview-box .upper-box {
+  height: 108px;
+  width: 100%;
+}
+
+.preview-box .upper-box img {
+  width: 108px;
+  height: 108px;
+}
+
+.preview-box .lower-box {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.preview-box .lower-box .js-img-change {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #666666;
+  background: #777777;
+  cursor: pointer;
+}
+
+.preview-box .lower-box .js-img-remove {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #666666;
+  background: #777777;
+  cursor: pointer;
+}
+/*# sourceMappingURL=edit.css.map */

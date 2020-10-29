@@ -53,6 +53,7 @@ end
 
 group :production do # 本番環境
   gem 'unicorn', '5.4.1'
+  gem 'mysql2', '>= 0.4.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

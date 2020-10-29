@@ -1,0 +1,60 @@
+.top-main {
+  height: 600px;
+  background-image: image-url("toppage/toppage.jpg");
+}
+
+.top-main .top-message {
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.top-main .top-message h1 {
+  font-size: 20px;
+}
+
+.top-main .top-message h2 {
+  font-size: 150px;
+  font-weight: bold;
+}
+
+.top-main .top-message .login-content {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.top-main .top-message .login-content .registration-page,
+.top-main .top-message .login-content .register,
+.top-main .top-message .login-content .login {
+  height: 50px;
+  width: 300px;
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 5px;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-main .top-message .login-content .registration-page a,
+.top-main .top-message .login-content .register a,
+.top-main .top-message .login-content .login a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  color: #f8f9fa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.top-main .top-message .login-content :hover {
+  background-color: #f8f9fa;
+}
+
+.top-main .top-message .login-content :hover a {
+  color: black;
+}
+/*# sourceMappingURL=index.css.map */

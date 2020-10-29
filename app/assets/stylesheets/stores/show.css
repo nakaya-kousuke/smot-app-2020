@@ -1,0 +1,117 @@
+.show-store-container {
+  background-color: #555555;
+  padding: 50px 0;
+}
+
+.show-store-container .show-store-content {
+  width: 700px;
+  text-decoration: none;
+  background-color: #303030;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+
+.show-store-container .show-store-content__upperBox {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.show-store-container .show-store-content__upperBox .store-name {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.show-store-container .show-store-content__upperBox .store-imageBox__top {
+  margin-bottom: 10px;
+}
+
+.show-store-container .show-store-content__upperBox .store-imageBox__top img {
+  object-fit: cover;
+}
+
+.show-store-container .show-store-content__upperBox .store-imageBox__sub {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.show-store-container .show-store-content__upperBox .store-imageBox__sub img {
+  object-fit: cover;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__title {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #eeeeee;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__title h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-addressBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-phone_number,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-business_hours,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-holiday,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-smoking_environment,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-website {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-addressBox h2,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-phone_number h2,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-business_hours h2,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-holiday h2,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-smoking_environment h2,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-website h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-addressBox .store-postal_code,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-phone_number .store-postal_code,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-business_hours .store-postal_code,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-holiday .store-postal_code,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-smoking_environment .store-postal_code,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-website .store-postal_code {
+  display: flex;
+}
+
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-addressBox .store-timeBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-phone_number .store-timeBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-business_hours .store-timeBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-holiday .store-timeBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-smoking_environment .store-timeBox,
+.show-store-container .show-store-content__bottomBox .store-infoBox__innerBox .store-website .store-timeBox {
+  display: flex;
+}
+
+.show-store-container .show-store-content .btnBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.show-store-container .show-store-content .btnBox .store-edit,
+.show-store-container .show-store-content .btnBox .store-delete {
+  width: 80px;
+  background-color: #999999;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.show-store-container .show-store-content .btnBox .store-edit a,
+.show-store-container .show-store-content .btnBox .store-delete a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=show.css.map */

@@ -1,0 +1,81 @@
+.store-container {
+  background-color: #555555;
+  padding-bottom: 30px;
+}
+
+.store-container .store-header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.store-container .store-header__title {
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 26px;
+  color: white;
+}
+
+.store-container .store-header__text {
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.store-container .store-content {
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.store-container .store-content .store-lists .store-list {
+  margin-bottom: 20px;
+  text-decoration: none;
+  background-color: #303030;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.store-container .store-content .store-lists .store-list__name {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.store-container .store-content .store-lists .store-list__name h5 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox {
+  display: flex;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-leftBox {
+  width: 50%;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-leftBox__img img {
+  object-fit: cover;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-rightBox {
+  width: 50%;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-rightBox__info {
+  text-decoration: none;
+  color: white;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-rightBox__info .store-business_hours {
+  margin: 10px 0;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-rightBox__info .store-business_hours .store-timeBox {
+  display: flex;
+}
+
+.store-container .store-content .store-lists .store-list .store-list-flexbox .store-list-rightBox__info h1 {
+  font-weight: bold;
+}
+/*# sourceMappingURL=store.css.map */
