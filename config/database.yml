@@ -56,9 +56,9 @@ production:
 
 # production:
 #   <<: *default
-#   database: smot_app_2020_production
-#   username: smot_app_2020
-#   password: <%= ENV['SMOT_APP_2020_DATABASE_PASSWORD'] %>
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: 5
+  # database: smot_app_2020_production
+  # username: smot_app_2020
+  # password: <%= ENV['SMOT_APP_2020_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
