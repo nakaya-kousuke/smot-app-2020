@@ -49,9 +49,16 @@ test:
 #
 production:
   <<: *default
-  # database: smot_app_2020_production
-  # username: smot_app_2020
-  # password: <%= ENV['SMOT_APP_2020_DATABASE_PASSWORD'] %>
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: <%= Rails.application.credentials.db[:database] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  socket: <%= Rails.application.credentials.db[:socket] %>
+
+# production:
+#   <<: *default
+#   database: smot_app_2020_production
+#   username: smot_app_2020
+#   password: <%= ENV['SMOT_APP_2020_DATABASE_PASSWORD'] %>
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 5
